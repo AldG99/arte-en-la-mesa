@@ -1,38 +1,246 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Fondo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #603c28;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Fijar el encabezado en la parte superior */
+  top: 0; /* Colocarlo en la parte superior */
+  width: 100%; /* Ancho completo */
+  z-index: 1000; /* Colocar el encabezado por encima de otros elementos */
+}
+
+header h1 {
+  font-size: 36px; /* Tamaño grande para el título */
+}
+
+/* Navegación */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 75px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* Tono café oscuro para los enlaces */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transición de color suave al pasar el ratón */
+}
+
+nav a:hover {
+  color: #e88335; /* Tono café más claro al pasar el ratón */
+}
+
+/* Estilos de la presentación */
+
+.welcome-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos del texto */
+
+.texto-superpuesto-container {
+  position: absolute;
+  font-family: 'Amatic SC', cursive;
+  color: #ffffff;
+  top: 5.5em;
+  right: 17.5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 2.0vw;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.texto-superpuesto p {
+  font-family: 'Amatic SC', cursive;
+  color: #ffffff;
+  font-weight: bold; 
+  font-size: 2.1vw;
+}
+
+/* Estilo para la sección de preparación de pan */
+
+#preparar-pan {
+  background-color: #ded4c5;
+  padding: 50px;
+}
+
+#preparar-pan h2 {
+  margin-left: 120px;
+  color: #603c28; /* Color de texto café oscuro */
+  font-family: 'Amatic SC', cursive;
+  font-size: 3.6vw;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la lista de pasos */
+#preparar-pan ul {
+  margin-left: 120px;
+  list-style-type: decimal; /* Numeración decimal */
+  padding-left: 20px; /* Espaciado izquierdo para los números */
+  color: #603c28;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold; 
+  font-size: 2.1vw;
+}
+
+/* Estilo para los elementos de la lista */
+#preparar-pan li {
+  margin-bottom: 10px; /* Espaciado inferior entre los pasos */
+  line-height: 1.5; /* Espaciado de línea para una mejor legibilidad */
+}
+
+/* Secciones */
+section {
+  padding: 40px;
+}
+
+section h2 {
+  font-size: 24px; /* Tamaño grande para los títulos de sección */
+  color: #603c28; /* Tono café oscuro para los títulos de sección */
+}
+
+/* Párrafos de texto */
+p {
+  font-size: 18px; /* Tamaño de fuente para el texto normal */
+  line-height: 1.5; /* Espaciado de línea agradable para la legibilidad */
+  color: #333; /* Tono café más oscuro para el texto */
+}
+
+#nuestra-historia {
+  background-color: #c5b39b;
+  padding: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-container {
+  text-align: justify;
+  flex: 2;
+  padding-left: 100px; /* Añade un espacio a la izquierda para separar el texto del borde izquierdo */
+}
+
+.text-container h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-container p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  color: #603c28;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container {
+  text-align: center;
+  flex: 1;
+  position: relative; /* Añade posicionamiento relativo para posicionar el nombre "Ana" */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-container img {
+  border-radius: 50%;
+  width: 275px;
+  height: 275px;
+}
+
+.image-container p {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  color: #ffffff;
+  margin-top: 10px; /* Agrega margen superior para separar el nombre de la imagen */
+  font-weight: bold; /* Hace que el nombre sea más visible y negrita */
+}
+
+/* Estilos para la sección de Ordenar Ahora */
+/* Estilos para la sección de Ordenar Ahora */
+#ordenar-ahora {
+  background-image: url('./images/tabla.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen en la sección */
+  padding: 75px;
+  color: #fff; /* Cambia el color del texto para que sea legible en el fondo */
+}
+
+#ordenar-ahora h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 65px;
+}
+
+#ordenar-ahora p {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+
+/* Estilos para el contenedor de las opciones de suscripción */
+.subscription-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos para cada opción de suscripción */
+.subscription-option {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para las imágenes dentro de las opciones de suscripción */
+.subscription-option img {
+  max-width: 100%; /* Evita que las imágenes sean más anchas que su contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilos para los botones dentro de las opciones de suscripción */
+.subscription-option button {
+  background-color: #603c28;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-option button:hover {
+  background-color: #8b5d40;
 }
