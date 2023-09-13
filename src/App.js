@@ -176,16 +176,16 @@ function App() {
         
         {/* Agrega los iconos de redes sociales */}
         <div className="social-icons">
-        <a href="#" className="social-icon" style={{ color: '#fff' }}>
+        <a href="https://github.com/AldG99/arte-en-la-mesa" className="social-icon" style={{ color: '#fff' }}>
   <FaFacebook />
 </a>
-<a href="#" className="social-icon" style={{ color: '#fff' }}>
+<a href="https://github.com/AldG99/arte-en-la-mesa" className="social-icon" style={{ color: '#fff' }}>
   <FaInstagram />
 </a>
-<a href="#" className="social-icon" style={{ color: '#fff' }}>
+<a href="https://github.com/AldG99/arte-en-la-mesa" className="social-icon" style={{ color: '#fff' }}>
   <FaTwitter />
 </a>
-<a href="#" className="social-icon" style={{ color: '#fff' }}>
+<a href="https://github.com/AldG99/arte-en-la-mesa" className="social-icon" style={{ color: '#fff' }}>
   <FaGooglePlus />
 </a>
         </div>
