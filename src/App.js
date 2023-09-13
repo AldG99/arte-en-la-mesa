@@ -6,12 +6,12 @@ import './App.css';
 
 function AlbumDeImagenes() {
   const imagenesDelAlbum = [
-    { id: 1, imgSrc: 'foto_ana.jpg', description: 'Baguette' },
-    { id: 2, imgSrc: 'foto_ana.jpg', description: 'Pan Integral' },
-    { id: 3, imgSrc: 'foto_ana.jpg', description: 'Ciabatta' },
-    { id: 4, imgSrc: 'foto_ana.jpg', description: 'Pan de Centeno' },
-    { id: 5, imgSrc: 'foto_ana.jpg', description: 'Pan de Ajo' },
-    { id: 6, imgSrc: 'foto_ana.jpg', description: 'Pan de Ajo y Queso' },
+    { id: 1, imgSrc: 'mes_01.jpg', description: 'Baguette' },
+    { id: 2, imgSrc: 'mes_02.jpg', description: 'Pan Integral' },
+    { id: 3, imgSrc: 'mes_03.jpg', description: 'Ciabatta' },
+    { id: 4, imgSrc: 'mes_04.jpg', description: 'Pan de Centeno' },
+    { id: 5, imgSrc: 'mes_05.jpg', description: 'Pan de Ajo' },
+    { id: 6, imgSrc: 'mes_06.jpg', description: 'Pan de Ajo y Queso' },
     // Agrega más objetos para las otras imágenes del álbum
   ];
 
@@ -29,7 +29,7 @@ function AlbumDeImagenes() {
             src={require(`./images/${imagen.imgSrc}`)}
             alt={imagen.description}
           />
-          <p className="legend">{`Imagen ${index + 1} ${obtenerMes(
+          <p className="legend">{`${obtenerMes(
             index
           )} - ${imagen.description}`}</p>
         </div>
@@ -41,8 +41,8 @@ function AlbumDeImagenes() {
 // Función para obtener el nombre del mes en base al índice
 function obtenerMes(index) {
   const meses = [
-    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
-    'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+    'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+    'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
   ];
   return meses[index];
 }
