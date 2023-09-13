@@ -9,7 +9,7 @@
 
 /* Encabezado */
 header {
-  background-color: #603c28;
+  background-color: #875138;
   color: #fff;
   font-family: 'Amatic SC', cursive;
   font-size: 26px;
@@ -152,7 +152,7 @@ p {
   font-family: 'Amatic SC', cursive;
   font-size: 60px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 
@@ -183,26 +183,66 @@ p {
   font-weight: bold; /* Hace que el nombre sea más visible y negrita */
 }
 
-/* Estilos para la sección de Ordenar Ahora */
-/* Estilos para la sección de Ordenar Ahora */
-#ordenar-ahora {
+/* Estilos para la sección de Productos */
+#productos {
   background-image: url('./images/tabla.jpg'); /* Ruta de la imagen de fondo */
   background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center center; /* Centra la imagen en la sección */
-  padding: 75px;
-  color: #fff; /* Cambia el color del texto para que sea legible en el fondo */
+  padding: 5.5%;
+}
+
+#productos h2 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 75px;
+  text-align: center; /* Centrar horizontalmente */
+  margin-bottom: 50px; /* Espaciado inferior */
+  color: #fff;
+}
+
+/* Estilo personalizado para el carrusel */
+.custom-carousel {
+  padding: 20px; /* Espaciado interno */
+  max-width: 600px; /* Ancho máximo del carrusel */
+  margin: 0 auto; /* Centrar el carrusel horizontalmente */
+  overflow: hidden; /* Ocultar el contenido que se desborda */
+}
+
+.custom-carousel .carousel .thumbs-wrapper {
+  display: none; /* Ocultar los puntos (dots) */
+}
+
+.custom-carousel .carousel .slide {
+  display: flex; /* Hacer que los slides sean flexibles */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilo para las imágenes dentro del carrusel */
+.custom-carousel img {
+  max-width: 100%; /* Las imágenes ocuparán un máximo del ancho del carrusel */
+  height: auto; /* Mantener la proporción de aspecto original */
+}
+
+
+
+/* Estilos para la sección de Ordenar Ahora */
+#ordenar-ahora {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #ordenar-ahora h2 {
   font-family: 'Dancing Script', cursive;
-  color: #ffffff;
+  color: #8e785d;
   font-size: 65px;
 }
 
 #ordenar-ahora p {
   font-family: 'Dancing Script', cursive;
-  color: #ffffff;
+  color: #8e785d;
+  font-weight: bold;
   font-size: 32px;
 }
 
@@ -211,6 +251,11 @@ p {
 .subscription-buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.subscription-buttons h3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
 }
 
 /* Estilos para cada opción de suscripción */
@@ -229,7 +274,7 @@ p {
 
 /* Estilos para los botones dentro de las opciones de suscripción */
 .subscription-option button {
-  background-color: #603c28;
+  background-color: #8e785d;
   color: #fff;
   font-family: 'Amatic SC', cursive;
   font-size: 32px;
@@ -243,4 +288,75 @@ p {
 
 .subscription-option button:hover {
   background-color: #8b5d40;
+}
+
+/* Estilo para la sección de Contacto */
+#contacto {
+  background-color: #c6b49c;
+  padding: 50px; /* Espaciado interno */
+  text-align: center; /* Centrar contenido horizontalmente */
+}
+
+#contacto h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 55px; /* Tamaño de fuente para el título */
+  margin-bottom: 20px; /* Espaciado inferior */
+  color: #ffffff; /* Color de texto oscuro */
+}
+
+#contacto p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 32px; /* Tamaño de fuente para los párrafos */
+  font-weight: bold;
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #ffffff; /* Color de texto más claro */
+}
+
+/* Estilo para el enlace de correo electrónico */
+#contacto a {
+  text-decoration: none; /* Sin subrayado en los enlaces */
+  color: #0073e6; /* Color de enlace azul */
+}
+
+#contacto a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor sobre el enlace */
+}
+
+/* Estilo para los iconos de redes sociales */
+.social-icons {
+  display: flex; /* Mostrar los iconos en línea */
+  justify-content: center; /* Centrar horizontalmente */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.social-icon {
+  font-size: 80px; /* Tamaño de fuente de los iconos */
+  margin: 0 60px; /* Espaciado horizontal entre iconos */
+}
+
+/* En tu archivo CSS */
+
+/* Estilos para el pie de página */
+footer {
+  display: flex; /* Usar flexbox para alinear elementos */
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: center; /* Centrar elementos verticalmente */
+  text-align: center; /* Alinear texto en el centro */
+  padding: 20px; /* Espaciado para el pie de página */
+  background-color: #53423a; /* Color de fondo café */
+  color: #fff; /* Color de texto opcional */
+}
+
+/* Estilos para el icono GiKnifeFork */
+footer .gi-knife-fork {
+  font-size: 75px; /* Tamaño del icono */
+  margin-bottom: 10px; /* Espaciado inferior opcional */
+}
+
+/* Estilos para el texto de copyright */
+footer .copyright {
+  font-size: 14px; /* Tamaño del texto */
+  user-select: none; /* Evita la selección de texto */
 }

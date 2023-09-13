@@ -1,4 +1,51 @@
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaFacebook, FaInstagram, FaTwitter, FaGooglePlus } from "react-icons/fa";
+import { GiKnifeFork } from 'react-icons/gi';
 import './App.css';
+
+function AlbumDeImagenes() {
+  const imagenesDelAlbum = [
+    { id: 1, imgSrc: 'foto_ana.jpg', description: 'Baguette' },
+    { id: 2, imgSrc: 'foto_ana.jpg', description: 'Pan Integral' },
+    { id: 3, imgSrc: 'foto_ana.jpg', description: 'Ciabatta' },
+    { id: 4, imgSrc: 'foto_ana.jpg', description: 'Pan de Centeno' },
+    { id: 5, imgSrc: 'foto_ana.jpg', description: 'Pan de Ajo' },
+    { id: 6, imgSrc: 'foto_ana.jpg', description: 'Pan de Ajo y Queso' },
+    // Agrega más objetos para las otras imágenes del álbum
+  ];
+
+  return (
+    <Carousel
+  showThumbs={false} // Configuración para ocultar los thumbs (puntos)
+  showStatus={false}
+  infiniteLoop
+  autoPlay
+  className="custom-carousel" // Utiliza la clase personalizada
+>
+      {imagenesDelAlbum.map((imagen, index) => (
+        <div key={imagen.id}>
+          <img
+            src={require(`./images/${imagen.imgSrc}`)}
+            alt={imagen.description}
+          />
+          <p className="legend">{`Imagen ${index + 1} ${obtenerMes(
+            index
+          )} - ${imagen.description}`}</p>
+        </div>
+      ))}
+    </Carousel>
+  );
+}
+
+// Función para obtener el nombre del mes en base al índice
+function obtenerMes(index) {
+  const meses = [
+    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
+    'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+  ];
+  return meses[index];
+}
 
 function App() {
   // Define los pasos para preparar pan
@@ -73,13 +120,11 @@ function App() {
   </div>
 </section>
       <section id="productos">
-        <h2>Nuestros Productos</h2>
-        {/* Agrega imágenes de productos horneados aquí */}
-        {/* Ejemplo: <img src="imagen_producto1.jpg" alt="Cupcakes decorados" />
-                    <img src="imagen_producto2.jpg" alt="Pastel de chocolate" /> */}
-        <p>Explora nuestra amplia gama de productos horneados, desde exquisitos cupcakes hasta pasteles personalizados y croissants recién salidos del horno.</p>
-        <p>Cada producto se prepara con los ingredientes más frescos y se hornea con pasión para ofrecerte un sabor inigualable.</p>
-      </section>
+  <h2>Nuestros Panes Horneados del Mes</h2>
+  <div className='imagen-mes'>
+  <AlbumDeImagenes />
+  </div>
+</section>
       <section id="ordenar-ahora">
   <h2>Ordenar Ahora</h2>
   <p>No esperes más para disfrutar de nuestros deliciosos productos horneados. Haz tu pedido ahora y deleita a tus papilas gustativas con auténticos sabores horneados.</p>
@@ -93,7 +138,7 @@ function App() {
             onDragStart={(e) => e.preventDefault()}
           />
       <h3>3 meses</h3>
-      <p>$200 la orden</p>
+      <p>$200</p>
       <button>Ordenar Ahora</button>
     </div>
     <div class="subscription-option">
@@ -104,7 +149,7 @@ function App() {
             onDragStart={(e) => e.preventDefault()}
           />
       <h3>6 meses</h3>
-      <p>$350 la orden</p>
+      <p>$350</p>
       <button>Ordenar Ahora</button>
     </div>
     <div class="subscription-option">
@@ -115,7 +160,7 @@ function App() {
             onDragStart={(e) => e.preventDefault()}
           />
       <h3>12 meses</h3>
-      <p>$600 la orden</p>
+      <p>$600</p>
       <button>Ordenar Ahora</button>
     </div>
   </div>
@@ -125,8 +170,35 @@ function App() {
         {/* Agrega imágenes relacionadas con la ubicación o el contacto */}
         {/* Ejemplo: <img src="imagen_mapa.jpg" alt="Ubicación de la panadería" /> */}
         <p>¿Tienes alguna pregunta o comentario? ¡No dudes en ponerte en contacto con nosotros!</p>
-        <p>Estamos ubicados en [tu dirección] y puedes llamarnos al [tu número de teléfono] o enviarnos un correo electrónico a [tu dirección de correo electrónico].</p>
+        <p>Estamos ubicados en 123 Calle Principal, Ciudad, País.</p>
+        <p>Puedes llamarnos al +1 (123) 456-7890.</p>
+        <p>Envíanos un correo electrónico a info@tu-panaderia.com.</p>
+        
+        {/* Agrega los iconos de redes sociales */}
+        <div className="social-icons">
+        <a href="#" className="social-icon" style={{ color: '#fff' }}>
+  <FaFacebook />
+</a>
+<a href="#" className="social-icon" style={{ color: '#fff' }}>
+  <FaInstagram />
+</a>
+<a href="#" className="social-icon" style={{ color: '#fff' }}>
+  <FaTwitter />
+</a>
+<a href="#" className="social-icon" style={{ color: '#fff' }}>
+  <FaGooglePlus />
+</a>
+        </div>
       </section>
+      <footer>
+  <div className="gi-knife-fork">
+    <GiKnifeFork />
+  </div>
+  <div className='copyright'>
+    © 2023 Alfredo García. Todos los derechos reservados.
+  </div>
+</footer>
+
     </div>
   );
 }
