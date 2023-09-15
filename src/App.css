@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 /* Fondo */
+
 * {
   margin: 0;
   padding: 0;
 }
 
 /* Encabezado */
+
 header {
   background-color: #875138;
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 26px;
-  padding: 20px;
+  font-size: 1.75vw; /* Tamaño de fuente relativo al ancho de la ventana */
+  padding: 1vw; /* Espaciado relativo al ancho de la ventana */
   text-align: center;
   position: fixed; /* Fijar el encabezado en la parte superior */
   top: 0; /* Colocarlo en la parte superior */
@@ -22,10 +24,11 @@ header {
 }
 
 header h1 {
-  font-size: 36px; /* Tamaño grande para el título */
+  font-size: 5vw; /* Tamaño grande para el título relativo al ancho de la ventana */
 }
 
 /* Navegación */
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -33,7 +36,7 @@ nav ul {
 
 nav li {
   display: inline;
-  margin-right: 75px;
+  margin-right: 4vw; /* Espaciado relativo al ancho de la ventana */
 }
 
 nav a {
@@ -45,6 +48,89 @@ nav a {
 
 nav a:hover {
   color: #e88335; /* Tono café más claro al pasar el ratón */
+}
+
+/* Estilo para la imagen adorno */
+
+.ornament-pan-uno {
+  position: absolute;
+  top: 62%;
+  right: 5%;
+  max-width: 20%;
+  height: auto;
+}
+
+.ornament-pan-dos {
+  position: absolute;
+  top: 45%;
+  right: 87%;
+  max-width: 10%;
+  height: auto;
+}
+
+.ornament-pan-tres {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  max-width: 10%;
+  height: auto;
+}
+
+.ornament-pan-cuatro {
+  position: absolute;
+  top: 5%;
+  right: 60%;
+  max-width: 15%;
+  height: auto;
+}
+
+.ornament-pan-cinco {
+  position: absolute;
+  top: 135%;
+  right: 0.7%;
+  max-width: 50%;
+  height: auto;
+}
+
+.ornament-pan-seis {
+  position: absolute;
+  top: 255%;
+  right: 80%;
+  max-width: 20%;
+  height: auto;
+}
+
+.ornament-pan-siete {
+  position: absolute;
+  top: 285%;
+  right: 10%;
+  max-width: 17%;
+  height: auto;
+}
+
+.ornament-pan-ocho {
+  position: absolute;
+  top: 315%;
+  right: 75%;
+  max-width: 10%;
+  height: auto;
+}
+
+.ornament-flecha {
+  position: absolute;
+  top: 430%;
+  right: 13%;
+  max-width: 20%;
+  height: auto;
+}
+
+.ornament-panaderia-sello {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  max-width: 18%;
+  height: auto;
+  transform: rotate(25deg); /* Rota la imagen 45 grados en sentido horario */
 }
 
 /* Estilos de la presentación */
@@ -101,6 +187,7 @@ nav a:hover {
 }
 
 /* Estilo para la lista de pasos */
+
 #preparar-pan ul {
   margin-left: 120px;
   list-style-type: decimal; /* Numeración decimal */
@@ -112,12 +199,14 @@ nav a:hover {
 }
 
 /* Estilo para los elementos de la lista */
+
 #preparar-pan li {
   margin-bottom: 10px; /* Espaciado inferior entre los pasos */
   line-height: 1.5; /* Espaciado de línea para una mejor legibilidad */
 }
 
 /* Secciones */
+
 section {
   padding: 40px;
 }
@@ -128,29 +217,33 @@ section h2 {
 }
 
 /* Párrafos de texto */
+
 p {
   font-size: 18px; /* Tamaño de fuente para el texto normal */
   line-height: 1.5; /* Espaciado de línea agradable para la legibilidad */
   color: #333; /* Tono café más oscuro para el texto */
 }
 
+/* Estilo para #nuestra-historia */
+
 #nuestra-historia {
   background-color: #c5b39b;
-  padding: 75px;
+  padding: 5% 10%; /* Ajusta el relleno en porcentaje para adaptarse mejor */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a medida que la pantalla se hace más pequeña */
 }
 
 .text-container {
   text-align: justify;
-  flex: 2;
-  padding-left: 100px; /* Añade un espacio a la izquierda para separar el texto del borde izquierdo */
+  flex: 1.75; /* Ajusta el ancho del contenedor de texto */
+  margin-right: 20px; /* Agrega un margen derecho para separar del elemento de imagen */
 }
 
 .text-container h2 {
   font-family: 'Amatic SC', cursive;
-  font-size: 60px;
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la ventana */
   margin-bottom: 20px;
   color: #fff;
   text-align: center;
@@ -158,50 +251,53 @@ p {
 
 .text-container p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 24px;
+  font-size: 1.3vw; /* Tamaño de fuente relativo al ancho de la ventana */
   color: #603c28;
 }
 
 .image-container {
   text-align: center;
-  flex: 1;
-  position: relative; /* Añade posicionamiento relativo para posicionar el nombre "Ana" */
+  flex: 0.5; /* Ajusta el ancho del contenedor de imagen */
+  position: relative;
 }
 
 .image-container img {
   border-radius: 50%;
-  width: 275px;
-  height: 275px;
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de aspecto original */
+  max-width: 275px; /* Controla el tamaño máximo de la imagen */
 }
 
 .image-container p {
   text-align: center;
   font-family: 'Amatic SC', cursive;
-  font-size: 50px;
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la ventana */
   color: #ffffff;
-  margin-top: 10px; /* Agrega margen superior para separar el nombre de la imagen */
-  font-weight: bold; /* Hace que el nombre sea más visible y negrita */
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* Estilos para la sección de Productos */
+
 #productos {
   background-image: url('./images/tabla.jpg'); /* Ruta de la imagen de fondo */
   background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center center; /* Centra la imagen en la sección */
-  padding: 5.5%;
+  padding: 4.5%;
+  text-align: center; /* Centra horizontalmente el contenido */
 }
 
 #productos h2 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
-  font-size: 75px;
-  text-align: center; /* Centrar horizontalmente */
-  margin-bottom: 50px; /* Espaciado inferior */
+  font-size: 5vw; /* Tamaño de fuente relativo al ancho de la ventana */
+  margin-bottom: 3%; /* Espaciado inferior */
   color: #fff;
 }
 
 /* Estilo personalizado para el carrusel */
+
 .custom-carousel {
   padding: 20px; /* Espaciado interno */
   max-width: 600px; /* Ancho máximo del carrusel */
@@ -225,62 +321,66 @@ p {
   height: auto; /* Mantener la proporción de aspecto original */
 }
 
-
-
 /* Estilos para la sección de Ordenar Ahora */
+
 #ordenar-ahora {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%; /* Ajusta los márgenes para centrar mejor en la pantalla */
+  margin-right: 5%;
+  text-align: center; /* Centra el contenido dentro del contenedor */
 }
 
 #ordenar-ahora h2 {
   font-family: 'Dancing Script', cursive;
   color: #8e785d;
-  font-size: 65px;
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la ventana */
 }
 
 #ordenar-ahora p {
   font-family: 'Dancing Script', cursive;
   color: #8e785d;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2vw; /* Tamaño de fuente relativo al ancho de la ventana */
 }
 
-
 /* Estilos para el contenedor de las opciones de suscripción */
+
 .subscription-buttons {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permite que las opciones se envuelvan en filas cuando no caben en una sola fila */
 }
 
 .subscription-buttons h3 {
   font-family: 'Amatic SC', cursive;
-  font-size: 35px;
+  font-size: 3vw; /* Tamaño de fuente relativo al ancho de la ventana */
 }
 
 /* Estilos para cada opción de suscripción */
+
 .subscription-option {
   text-align: center;
   flex: 1;
-  margin: 0 10px;
-  padding: 20px;
+  margin: 10px; /* Aumenta el margen para separar las opciones */
+  padding: 30px;
 }
 
 /* Estilos para las imágenes dentro de las opciones de suscripción */
+
 .subscription-option img {
   max-width: 100%; /* Evita que las imágenes sean más anchas que su contenedor */
   height: auto; /* Mantiene la proporción original de la imagen */
 }
 
 /* Estilos para los botones dentro de las opciones de suscripción */
+
 .subscription-option button {
   background-color: #8e785d;
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 32px;
+  font-size: 2vw; /* Tamaño de fuente relativo al ancho de la ventana */
   font-weight: bold;
   border: none;
-  padding: 10px 20px;
+  padding: 1% 2%; /* Ajusta el relleno en porcentaje para adaptarse mejor */
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -291,6 +391,7 @@ p {
 }
 
 /* Estilo para la sección de Contacto */
+
 #contacto {
   background-color: #c6b49c;
   padding: 50px; /* Espaciado interno */
@@ -314,6 +415,7 @@ p {
 }
 
 /* Estilo para el enlace de correo electrónico */
+
 #contacto a {
   text-decoration: none; /* Sin subrayado en los enlaces */
   color: #0073e6; /* Color de enlace azul */
@@ -324,6 +426,7 @@ p {
 }
 
 /* Estilo para los iconos de redes sociales */
+
 .social-icons {
   display: flex; /* Mostrar los iconos en línea */
   justify-content: center; /* Centrar horizontalmente */
@@ -331,13 +434,12 @@ p {
 }
 
 .social-icon {
-  font-size: 80px; /* Tamaño de fuente de los iconos */
-  margin: 0 60px; /* Espaciado horizontal entre iconos */
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la ventana */
+  margin: 0 2vw; /* Espaciado horizontal relativo al ancho de la ventana */
 }
 
-/* En tu archivo CSS */
-
 /* Estilos para el pie de página */
+
 footer {
   display: flex; /* Usar flexbox para alinear elementos */
   flex-direction: column; /* Apilar elementos verticalmente */
@@ -350,12 +452,14 @@ footer {
 }
 
 /* Estilos para el icono GiKnifeFork */
+
 footer .gi-knife-fork {
   font-size: 75px; /* Tamaño del icono */
   margin-bottom: 10px; /* Espaciado inferior opcional */
 }
 
 /* Estilos para el texto de copyright */
+
 footer .copyright {
   font-size: 14px; /* Tamaño del texto */
   user-select: none; /* Evita la selección de texto */
